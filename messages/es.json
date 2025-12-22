@@ -1,0 +1,148 @@
+{
+    "metadata": {
+        "title": "K-Nomad | Guía de ciudades para nómadas digitales en Corea",
+        "description": "Encuentra las mejores ciudades para nómadas digitales en Corea. Compara el costo de vida, la velocidad de Internet, los espacios de coworking y más de un vistazo."
+    },
+    "header": {
+        "search": "Buscar ciudades...",
+        "login": "Iniciar sesión",
+        "signup": "Registrarse"
+    },
+    "hero": {
+        "badge": "Guía para nómadas digitales en Corea",
+        "titleStart": "Encuentra las",
+        "titleHighlight": "mejores ciudades para nómadas",
+        "titleEnd": "en Corea",
+        "subtitle": "Compara el costo de vida, la velocidad de Internet, los espacios de coworking y toda la información que necesitan los nómadas digitales. Encuentra la ciudad adecuada para ti.",
+        "exploreCities": "Explorar ciudades",
+        "about": "Sobre nosotros",
+        "stats": {
+            "cities": "Ciudades",
+            "reviews": "Reseñas",
+            "metrics": "Métricas"
+        }
+    },
+    "filter": {
+        "budget": "Presupuesto",
+        "region": "Región",
+        "environment": "Ambiente",
+        "season": "Mejor temporada",
+        "reset": "Restablecer",
+        "results": "Resultados",
+        "citiesCount": "{count} ciudades",
+        "budgetOptions": {
+            "all": "Todo",
+            "under100": "Menos de ₩1M",
+            "100to200": "₩1M-₩2M",
+            "over200": "Más de ₩2M"
+        },
+        "regionOptions": {
+            "all": "Todo",
+            "capital": "Área Capital",
+            "gyeongsang": "Gyeongsang",
+            "jeolla": "Jeolla",
+            "gangwon": "Gangwon",
+            "jeju": "Jeju",
+            "chungcheong": "Chungcheong"
+        },
+        "environmentOptions": {
+            "all": "Todo",
+            "nature": "Naturaleza",
+            "urban": "Urbano",
+            "cafe": "Trabajo en café",
+            "coworking": "Espacio de coworking"
+        },
+        "seasonOptions": {
+            "all": "Todo",
+            "spring": "Primavera",
+            "summer": "Verano",
+            "fall": "Otoño",
+            "winter": "Invierno"
+        }
+    },
+    "cityCard": {
+        "reviews": "reseñas",
+        "monthly": "mes",
+        "currency": "USD"
+    },
+    "cityDetail": {
+        "monthlyCost": "Costo mensual",
+        "likes": "Me gusta",
+        "dislikes": "No me gusta",
+        "budget": "Rango de presupuesto",
+        "region": "Región",
+        "environment": "Ambiente",
+        "bestSeason": "Mejor temporada",
+        "backToList": "Volver a la lista"
+    },
+    "footer": {
+        "about": "Una plataforma para encontrar las mejores ciudades para nómadas digitales en Corea y compartir experiencias.",
+        "links": "Enlaces rápidos",
+        "serviceIntro": "Sobre el servicio",
+        "terms": "Términos de servicio",
+        "privacy": "Política de privacidad",
+        "contact": "Contacto",
+        "copyright": "© 2024 K-Nomad. Todos los derechos reservados.",
+        "language": {
+            "ko": "한국어",
+            "en": "English",
+            "ja": "日本語",
+            "zh": "中文",
+            "fr": "Français",
+            "it": "Italiano",
+            "es": "Español"
+        }
+    },
+    "language": {
+        "ko": "한국어",
+        "en": "English",
+        "ja": "日本語",
+        "zh": "中文",
+        "fr": "Français",
+        "it": "Italiano",
+        "es": "Español"
+    },
+    "auth": {
+        "login": {
+            "title": "Iniciar sesión",
+            "subtitle": "Bienvenido de nuevo a K-Nomad",
+            "email": "Correo electrónico",
+            "emailPlaceholder": "Ingresa tu correo electrónico",
+            "password": "Contraseña",
+            "passwordPlaceholder": "Ingresa tu contraseña",
+            "forgotPassword": "¿Olvidaste tu contraseña?",
+            "submit": "Iniciar sesión",
+            "loading": "Iniciando sesión...",
+            "or": "o",
+            "noAccount": "¿No tienes una cuenta?",
+            "registerLink": "Regístrate"
+        },
+        "register": {
+            "title": "Registrarse",
+            "subtitle": "Comienza tu viaje nómada con K-Nomad",
+            "name": "Nombre",
+            "namePlaceholder": "Ingresa tu nombre",
+            "email": "Correo electrónico",
+            "emailPlaceholder": "Ingresa tu correo electrónico",
+            "password": "Contraseña",
+            "passwordPlaceholder": "Ingresa tu contraseña",
+            "confirmPassword": "Confirmar contraseña",
+            "confirmPasswordPlaceholder": "Vuelve a ingresar tu contraseña",
+            "passwordMismatch": "Las contraseñas no coinciden",
+            "requirements": {
+                "minLength": "Al menos 8 caracteres",
+                "hasNumber": "Contiene un número",
+                "hasSpecial": "Contiene un carácter especial (!@#$%^&*)"
+            },
+            "terms": "Al registrarte, aceptas nuestros",
+            "termsLink": "Términos de servicio",
+            "and": "y",
+            "privacyLink": "Política de privacidad",
+            "submit": "Registrarse",
+            "loading": "Registrando...",
+            "or": "o",
+            "hasAccount": "¿Ya tienes una cuenta?",
+            "loginLink": "Iniciar sesión"
+        }
+    }
+}

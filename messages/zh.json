@@ -1,0 +1,139 @@
+{
+  "metadata": {
+    "title": "K-Nomad | 韩国数字游民城市指南",
+    "description": "寻找韩国最适合数字游民生活的城市。一目了然地比较生活成本、网速、共享办公空间等所有信息。"
+  },
+  "header": {
+    "search": "搜索城市...",
+    "login": "登录",
+    "signup": "注册"
+  },
+  "hero": {
+    "badge": "韩国数字游民指南",
+    "titleStart": "在韩国寻找",
+    "titleHighlight": "最适合游民的城市",
+    "titleEnd": "",
+    "subtitle": "一目了然地比较生活成本、网速、共享办公空间等数字游民所需的所有信息，找到适合您的城市。",
+    "exploreCities": "探索城市",
+    "about": "关于我们",
+    "stats": {
+      "cities": "城市信息",
+      "reviews": "评价",
+      "metrics": "评估指标"
+    }
+  },
+  "filter": {
+    "budget": "预算",
+    "region": "地区",
+    "environment": "环境",
+    "season": "最佳季节",
+    "reset": "重置",
+    "results": "搜索结果",
+    "citiesCount": "{count}个城市",
+    "budgetOptions": {
+      "all": "全部",
+      "under100": "₩100万以下",
+      "100to200": "₩100万-₩200万",
+      "over200": "₩200万以上"
+    },
+    "regionOptions": {
+      "all": "全部",
+      "capital": "首都圈",
+      "gyeongsang": "庆尚道",
+      "jeolla": "全罗道",
+      "gangwon": "江原道",
+      "jeju": "济州岛",
+      "chungcheong": "忠清道"
+    },
+    "environmentOptions": {
+      "all": "全部",
+      "nature": "亲近自然",
+      "urban": "偏好都市",
+      "cafe": "咖啡厅办公",
+      "coworking": "共享办公"
+    },
+    "seasonOptions": {
+      "all": "全部",
+      "spring": "春季",
+      "summer": "夏季",
+      "fall": "秋季",
+      "winter": "冬季"
+    }
+  },
+  "cityCard": {
+    "reviews": "条评价",
+    "monthly": "月",
+    "currency": "元"
+  },
+  "cityDetail": {
+    "monthlyCost": "月度生活费",
+    "likes": "点赞",
+    "dislikes": "不喜欢",
+    "budget": "预算范围",
+    "region": "地区",
+    "environment": "环境",
+    "bestSeason": "最佳季节",
+    "backToList": "返回列表"
+  },
+  "footer": {
+    "about": "一个寻找韩国最适合数字游民生活的城市并分享体验的平台。",
+    "links": "快速链接",
+    "serviceIntro": "服务介绍",
+    "terms": "使用条款",
+    "privacy": "隐私政策",
+    "contact": "联系我们",
+    "copyright": "© 2024 K-Nomad. All rights reserved."
+  },
+  "language": {
+    "ko": "한국어",
+    "en": "English",
+    "ja": "日本語",
+    "zh": "中文",
+    "fr": "Français",
+    "it": "Italiano",
+    "es": "Español"
+  },
+  "auth": {
+    "login": {
+      "title": "登录",
+      "subtitle": "欢迎回到K-Nomad",
+      "email": "邮箱",
+      "emailPlaceholder": "请输入邮箱",
+      "password": "密码",
+      "passwordPlaceholder": "请输入密码",
+      "forgotPassword": "忘记密码？",
+      "submit": "登录",
+      "loading": "登录中...",
+      "or": "或",
+      "noAccount": "还没有账号？",
+      "registerLink": "立即注册"
+    },
+    "register": {
+      "title": "注册",
+      "subtitle": "与K-Nomad一起开启您的游民之旅",
+      "name": "姓名",
+      "namePlaceholder": "请输入姓名",
+      "email": "邮箱",
+      "emailPlaceholder": "请输入邮箱",
+      "password": "密码",
+      "passwordPlaceholder": "请输入密码",
+      "confirmPassword": "确认密码",
+      "confirmPasswordPlaceholder": "请再次输入密码",
+      "passwordMismatch": "两次密码不一致",
+      "requirements": {
+        "minLength": "至少8个字符",
+        "hasNumber": "包含数字",
+        "hasSpecial": "包含特殊字符 (!@#$%^&*)"
+      },
+      "terms": "注册即表示您同意我们的",
+      "termsLink": "服务条款",
+      "and": "和",
+      "privacyLink": "隐私政策",
+      "submit": "注册",
+      "loading": "注册中...",
+      "or": "或",
+      "hasAccount": "已有账号？",
+      "loginLink": "立即登录"
+    }
+  }
+}

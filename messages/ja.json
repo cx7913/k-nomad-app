@@ -1,0 +1,139 @@
+{
+  "metadata": {
+    "title": "K-Nomad | 韓国デジタルノマド都市ガイド",
+    "description": "韓国でデジタルノマドとして暮らしやすい都市を探しましょう。生活費、インターネット速度、コワーキングスペースなどの情報を一目で比較できます。"
+  },
+  "header": {
+    "search": "都市を検索...",
+    "login": "ログイン",
+    "signup": "新規登録"
+  },
+  "hero": {
+    "badge": "韓国デジタルノマドガイド",
+    "titleStart": "韓国で",
+    "titleHighlight": "ノマドに最適な都市",
+    "titleEnd": "を見つけよう",
+    "subtitle": "生活費、インターネット速度、コワーキングスペースなど、デジタルノマドに必要なすべての情報を一目で比較し、自分に合った都市を見つけましょう。",
+    "exploreCities": "都市を探す",
+    "about": "サービス紹介",
+    "stats": {
+      "cities": "都市情報",
+      "reviews": "レビュー",
+      "metrics": "評価指標"
+    }
+  },
+  "filter": {
+    "budget": "予算",
+    "region": "地域",
+    "environment": "環境",
+    "season": "ベストシーズン",
+    "reset": "リセット",
+    "results": "検索結果",
+    "citiesCount": "{count}都市",
+    "budgetOptions": {
+      "all": "すべて",
+      "under100": "₩100万以下",
+      "100to200": "₩100万-₩200万",
+      "over200": "₩200万以上"
+    },
+    "regionOptions": {
+      "all": "すべて",
+      "capital": "首都圏",
+      "gyeongsang": "慶尚道",
+      "jeolla": "全羅道",
+      "gangwon": "江原道",
+      "jeju": "済州島",
+      "chungcheong": "忠清道"
+    },
+    "environmentOptions": {
+      "all": "すべて",
+      "nature": "自然志向",
+      "urban": "都市志向",
+      "cafe": "カフェ作業",
+      "coworking": "コワーキング"
+    },
+    "seasonOptions": {
+      "all": "すべて",
+      "spring": "春",
+      "summer": "夏",
+      "fall": "秋",
+      "winter": "冬"
+    }
+  },
+  "cityCard": {
+    "reviews": "件のレビュー",
+    "monthly": "月",
+    "currency": "万円"
+  },
+  "cityDetail": {
+    "monthlyCost": "月額生活費",
+    "likes": "いいね",
+    "dislikes": "よくない",
+    "budget": "予算範囲",
+    "region": "地域",
+    "environment": "環境",
+    "bestSeason": "ベストシーズン",
+    "backToList": "一覧に戻る"
+  },
+  "footer": {
+    "about": "韓国でデジタルノマドとして暮らしやすい都市を探し、体験を共有するプラットフォームです。",
+    "links": "クイックリンク",
+    "serviceIntro": "サービス紹介",
+    "terms": "利用規約",
+    "privacy": "プライバシーポリシー",
+    "contact": "お問い合わせ",
+    "copyright": "© 2024 K-Nomad. All rights reserved."
+  },
+  "language": {
+    "ko": "한국어",
+    "en": "English",
+    "ja": "日本語",
+    "zh": "中文",
+    "fr": "Français",
+    "it": "Italiano",
+    "es": "Español"
+  },
+  "auth": {
+    "login": {
+      "title": "ログイン",
+      "subtitle": "K-Nomadへようこそ",
+      "email": "メールアドレス",
+      "emailPlaceholder": "メールアドレスを入力",
+      "password": "パスワード",
+      "passwordPlaceholder": "パスワードを入力",
+      "forgotPassword": "パスワードをお忘れですか？",
+      "submit": "ログイン",
+      "loading": "ログイン中...",
+      "or": "または",
+      "noAccount": "アカウントをお持ちでないですか？",
+      "registerLink": "新規登録"
+    },
+    "register": {
+      "title": "新規登録",
+      "subtitle": "K-Nomadでノマド生活を始めましょう",
+      "name": "名前",
+      "namePlaceholder": "名前を入力",
+      "email": "メールアドレス",
+      "emailPlaceholder": "メールアドレスを入力",
+      "password": "パスワード",
+      "passwordPlaceholder": "パスワードを入力",
+      "confirmPassword": "パスワード確認",
+      "confirmPasswordPlaceholder": "パスワードを再入力",
+      "passwordMismatch": "パスワードが一致しません",
+      "requirements": {
+        "minLength": "8文字以上",
+        "hasNumber": "数字を含む",
+        "hasSpecial": "特殊文字を含む (!@#$%^&*)"
+      },
+      "terms": "登録することで、",
+      "termsLink": "利用規約",
+      "and": "と",
+      "privacyLink": "プライバシーポリシー",
+      "submit": "登録する",
+      "loading": "登録中...",
+      "or": "または",
+      "hasAccount": "すでにアカウントをお持ちですか？",
+      "loginLink": "ログイン"
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "title": "K-Nomad | Korean Digital Nomad City Guide",
+    "description": "Find the best cities for digital nomads in Korea. Compare cost of living, internet speed, coworking spaces, and more at a glance."
+  },
+  "header": {
+    "login": "Log in",
+    "signup": "Sign up",
+    "logout": "Log out"
+  },
+  "hero": {
+    "badge": "Korean Digital Nomad Guide",
+    "titleStart": "Find the",
+    "titleHighlight": "best cities for nomads",
+    "titleEnd": "in Korea",
+    "subtitle": "Compare cost of living, internet speed, coworking spaces, and all the information digital nomads need at a glance. Find the city that's right for you.",
+    "exploreCities": "Explore Cities",
+    "stats": {
+      "cities": "Cities",
+      "reviews": "Reviews",
+      "metrics": "Metrics"
+    }
+  },
+  "filter": {
+    "budget": "Budget",
+    "region": "Region",
+    "environment": "Environment",
+    "season": "Best Season",
+    "reset": "Reset",
+    "results": "Results",
+    "citiesCount": "{count} cities",
+    "budgetOptions": {
+      "all": "All",
+      "under100": "Under ₩1M",
+      "100to200": "₩1M-₩2M",
+      "over200": "Over ₩2M"
+    },
+    "regionOptions": {
+      "all": "All",
+      "capital": "Capital Area",
+      "gyeongsang": "Gyeongsang",
+      "jeolla": "Jeolla",
+      "gangwon": "Gangwon",
+      "jeju": "Jeju",
+      "chungcheong": "Chungcheong"
+    },
+    "environmentOptions": {
+      "all": "All",
+      "nature": "Nature Friendly",
+      "urban": "Urban Preferred",
+      "cafe": "Cafe Work",
+      "coworking": "Coworking Space"
+    },
+    "seasonOptions": {
+      "all": "All",
+      "spring": "Spring",
+      "summer": "Summer",
+      "fall": "Fall",
+      "winter": "Winter"
+    }
+  },
+  "cityCard": {
+    "reviews": "reviews",
+    "monthly": "mo",
+    "currency": "USD"
+  },
+  "cityDetail": {
+    "monthlyCost": "Monthly Cost",
+    "likes": "Likes",
+    "dislikes": "Dislikes",
+    "budget": "Budget Range",
+    "region": "Region",
+    "environment": "Environment",
+    "bestSeason": "Best Season",
+    "backToList": "Back to List"
+  },
+  "footer": {
+    "about": "A platform to find the best cities for digital nomads in Korea and share experiences.",
+    "contact": "Contact",
+    "copyright": "© 2024 K-Nomad. All rights reserved."
+  },
+  "language": {
+    "ko": "한국어",
+    "en": "English",
+    "ja": "日本語",
+    "zh": "中文",
+    "fr": "Français",
+    "it": "Italiano",
+    "es": "Español"
+  },
+  "auth": {
+    "login": {
+      "title": "Log In",
+      "subtitle": "Welcome back to K-Nomad",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "forgotPassword": "Forgot password?",
+      "submit": "Log In",
+      "loading": "Logging in...",
+      "or": "or",
+      "noAccount": "Don't have an account?",
+      "registerLink": "Sign up"
+    },
+    "forgotPassword": {
+      "title": "Forgot Password",
+      "subtitle": "Enter your email address and we'll send you a password reset link.",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "submit": "Send Reset Link",
+      "loading": "Sending...",
+      "backToLogin": "Back to login",
+      "emailSentTitle": "Check your email",
+      "emailSentDescription": "We've sent a password reset link to your email address."
+    },
+    "resetPassword": {
+      "title": "Set New Password",
+      "subtitle": "Please enter your new password.",
+      "newPassword": "New Password",
+      "newPasswordPlaceholder": "Enter new password",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "Re-enter your password",
+      "passwordMismatch": "Passwords do not match",
+      "requirements": {
+        "minLength": "At least 8 characters",
+        "hasNumber": "Contains a number",
+        "hasSpecial": "Contains a special character (!@#$%^&*)"
+      },
+      "submit": "Change Password",
+      "loading": "Changing...",
+      "successTitle": "Password Changed",
+      "successDescription": "Your password has been successfully changed.",
+      "goToLogin": "Go to Login"
+    },
+    "register": {
+      "title": "Sign Up",
+      "subtitle": "Start your nomad journey with K-Nomad",
+      "name": "Name",
+      "namePlaceholder": "Enter your name",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "Re-enter your password",
+      "passwordMismatch": "Passwords do not match",
+      "requirements": {
+        "minLength": "At least 8 characters",
+        "hasNumber": "Contains a number",
+        "hasSpecial": "Contains a special character (!@#$%^&*)"
+      },
+      "terms": "By signing up, you agree to our",
+      "termsLink": "Terms of Service",
+      "and": "and",
+      "privacyLink": "Privacy Policy",
+      "submit": "Sign Up",
+      "loading": "Signing up...",
+      "or": "or",
+      "hasAccount": "Already have an account?",
+      "loginLink": "Log in"
+    }
+  }
+}
