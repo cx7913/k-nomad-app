@@ -62,7 +62,13 @@
   "cityCard": {
     "reviews": "reviews",
     "monthly": "mo",
-    "currency": "USD"
+    "currency": "USD",
+    "budget": "Budget",
+    "environment": "Environment",
+    "bestSeason": "Best Season"
+  },
+  "cityGrid": {
+    "title": "City List"
   },
   "cityDetail": {
     "monthlyCost": "Monthly Cost",

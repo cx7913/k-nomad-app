@@ -62,7 +62,13 @@
   "cityCard": {
     "reviews": "리뷰",
     "monthly": "월",
-    "currency": "만원"
+    "currency": "만원",
+    "budget": "예산",
+    "environment": "환경",
+    "bestSeason": "최고계절"
+  },
+  "cityGrid": {
+    "title": "도시리스트"
   },
   "cityDetail": {
     "monthlyCost": "월 생활비",
