@@ -1,21 +1,33 @@
-import { setRequestLocale } from "next-intl/server";
+"use client";
+
+import { useState, useCallback } from "react";
 import { HeroSection } from "@/components/home/HeroSection";
-import { FilterBar } from "@/components/home/FilterBar";
+import { FilterBar, FilterValues } from "@/components/home/FilterBar";
 import { CityGrid } from "@/components/home/CityGrid";
+import { useParams } from "next/navigation";
 
-type Props = {
-  params: Promise<{ locale: string }>;
-};
+export default function Home() {
+  const params = useParams();
+  const locale = params.locale as string;
 
-export default async function Home({ params }: Props) {
-  const { locale } = await params;
-  setRequestLocale(locale);
+  const [filters, setFilters] = useState<FilterValues>({
+    region: "all",
+    budget: "all",
+    environment: "all",
+    season: "all",
+  });
+
+  const [resultCount, setResultCount] = useState(0);
+
+  const handleResultCountChange = useCallback((count: number) => {
+    setResultCount(count);
+  }, []);
 
   return (
     <>
       <HeroSection />
-      <FilterBar />
-      <CityGrid locale={locale} />
+      <FilterBar filters={filters} onFilterChange={setFilters} resultCount={resultCount} />
+      <CityGrid locale={locale} filters={filters} onResultCountChange={handleResultCountChange} />
     </>
   );
 }
