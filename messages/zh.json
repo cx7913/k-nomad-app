@@ -6,7 +6,8 @@
   "header": {
     "search": "搜索城市...",
     "login": "登录",
-    "signup": "注册"
+    "signup": "注册",
+    "logout": "登出"
   },
   "hero": {
     "badge": "韩国数字游民指南",
@@ -63,7 +64,13 @@
   "cityCard": {
     "reviews": "条评价",
     "monthly": "月",
-    "currency": "元"
+    "currency": "元",
+    "budget": "预算",
+    "environment": "环境",
+    "bestSeason": "最佳季节"
+  },
+  "cityGrid": {
+    "title": "城市列表"
   },
   "cityDetail": {
     "monthlyCost": "月度生活费",
@@ -134,6 +141,36 @@
       "or": "或",
       "hasAccount": "已有账号？",
       "loginLink": "立即登录"
+    },
+    "forgotPassword": {
+      "title": "忘记密码",
+      "subtitle": "请输入您的邮箱地址，我们将向您发送密码重置链接。",
+      "email": "邮箱",
+      "emailPlaceholder": "请输入邮箱",
+      "submit": "发送重置链接",
+      "loading": "发送中...",
+      "backToLogin": "返回登录",
+      "emailSentTitle": "请查收邮件",
+      "emailSentDescription": "我们已将密码重置链接发送到您的邮箱。"
+    },
+    "resetPassword": {
+      "title": "设置新密码",
+      "subtitle": "请输入您的新密码。",
+      "newPassword": "新密码",
+      "newPasswordPlaceholder": "请输入新密码",
+      "confirmPassword": "确认密码",
+      "confirmPasswordPlaceholder": "请再次输入密码",
+      "passwordMismatch": "两次密码不一致",
+      "requirements": {
+        "minLength": "至少8个字符",
+        "hasNumber": "包含数字",
+        "hasSpecial": "包含特殊字符 (!@#$%^&*)"
+      },
+      "submit": "更改密码",
+      "loading": "更改中...",
+      "successTitle": "密码已更改",
+      "successDescription": "您的密码已成功更改。",
+      "goToLogin": "前往登录"
     }
   }
 }

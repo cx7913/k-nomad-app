@@ -6,7 +6,8 @@
   "header": {
     "search": "都市を検索...",
     "login": "ログイン",
-    "signup": "新規登録"
+    "signup": "新規登録",
+    "logout": "ログアウト"
   },
   "hero": {
     "badge": "韓国デジタルノマドガイド",
@@ -63,7 +64,13 @@
   "cityCard": {
     "reviews": "件のレビュー",
     "monthly": "月",
-    "currency": "万円"
+    "currency": "万円",
+    "budget": "予算",
+    "environment": "環境",
+    "bestSeason": "ベストシーズン"
+  },
+  "cityGrid": {
+    "title": "都市リスト"
   },
   "cityDetail": {
     "monthlyCost": "月額生活費",
@@ -134,6 +141,36 @@
       "or": "または",
       "hasAccount": "すでにアカウントをお持ちですか？",
       "loginLink": "ログイン"
+    },
+    "forgotPassword": {
+      "title": "パスワードを忘れた場合",
+      "subtitle": "メールアドレスを入力すると、パスワードリセットリンクをお送りします。",
+      "email": "メールアドレス",
+      "emailPlaceholder": "メールアドレスを入力",
+      "submit": "リセットリンクを送信",
+      "loading": "送信中...",
+      "backToLogin": "ログインに戻る",
+      "emailSentTitle": "メールを確認してください",
+      "emailSentDescription": "パスワードリセットリンクをメールで送信しました。"
+    },
+    "resetPassword": {
+      "title": "新しいパスワードを設定",
+      "subtitle": "新しいパスワードを入力してください。",
+      "newPassword": "新しいパスワード",
+      "newPasswordPlaceholder": "新しいパスワードを入力",
+      "confirmPassword": "パスワード確認",
+      "confirmPasswordPlaceholder": "パスワードを再入力",
+      "passwordMismatch": "パスワードが一致しません",
+      "requirements": {
+        "minLength": "8文字以上",
+        "hasNumber": "数字を含む",
+        "hasSpecial": "特殊文字を含む (!@#$%^&*)"
+      },
+      "submit": "パスワードを変更",
+      "loading": "変更中...",
+      "successTitle": "パスワードが変更されました",
+      "successDescription": "パスワードが正常に変更されました。",
+      "goToLogin": "ログインする"
     }
   }
 }

@@ -61,7 +61,7 @@ export function FilterBar({ filters, onFilterChange, resultCount }: FilterBarPro
               value={filters.budget}
               onValueChange={(value) => onFilterChange({ ...filters, budget: value })}
             >
-              <SelectTrigger className="w-[140px]">
+              <SelectTrigger className="flex-1 min-w-[120px]">
                 <SelectValue placeholder={t("budget")} />
               </SelectTrigger>
               <SelectContent>
@@ -78,7 +78,7 @@ export function FilterBar({ filters, onFilterChange, resultCount }: FilterBarPro
               value={filters.region}
               onValueChange={(value) => onFilterChange({ ...filters, region: value })}
             >
-              <SelectTrigger className="w-[120px]">
+              <SelectTrigger className="flex-1 min-w-[120px]">
                 <SelectValue placeholder={t("region")} />
               </SelectTrigger>
               <SelectContent>
@@ -95,7 +95,7 @@ export function FilterBar({ filters, onFilterChange, resultCount }: FilterBarPro
               value={filters.environment}
               onValueChange={(value) => onFilterChange({ ...filters, environment: value })}
             >
-              <SelectTrigger className="w-[140px]">
+              <SelectTrigger className="flex-1 min-w-[120px]">
                 <SelectValue placeholder={t("environment")} />
               </SelectTrigger>
               <SelectContent>
@@ -112,7 +112,7 @@ export function FilterBar({ filters, onFilterChange, resultCount }: FilterBarPro
               value={filters.season}
               onValueChange={(value) => onFilterChange({ ...filters, season: value })}
             >
-              <SelectTrigger className="w-[120px]">
+              <SelectTrigger className="flex-1 min-w-[120px]">
                 <SelectValue placeholder={t("season")} />
               </SelectTrigger>
               <SelectContent>
@@ -128,7 +128,7 @@ export function FilterBar({ filters, onFilterChange, resultCount }: FilterBarPro
             <Button
               variant="ghost"
               size="sm"
-              className="text-muted-foreground"
+              className="text-muted-foreground flex-none"
               onClick={handleReset}
             >
               <RotateCcw className="h-4 w-4 mr-1" />
