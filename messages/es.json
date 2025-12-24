@@ -6,7 +6,8 @@
     "header": {
         "search": "Buscar ciudades...",
         "login": "Iniciar sesión",
-        "signup": "Registrarse"
+        "signup": "Registrarse",
+        "logout": "Cerrar sesión"
     },
     "hero": {
         "badge": "Guía para nómadas digitales en Corea",
@@ -63,7 +64,13 @@
     "cityCard": {
         "reviews": "reseñas",
         "monthly": "mes",
-        "currency": "USD"
+        "currency": "USD",
+        "budget": "Presupuesto",
+        "environment": "Ambiente",
+        "bestSeason": "Mejor temporada"
+    },
+    "cityGrid": {
+        "title": "Lista de ciudades"
     },
     "cityDetail": {
         "monthlyCost": "Costo mensual",
@@ -143,6 +150,36 @@
             "or": "o",
             "hasAccount": "¿Ya tienes una cuenta?",
             "loginLink": "Iniciar sesión"
+        },
+        "forgotPassword": {
+            "title": "Recuperar contraseña",
+            "subtitle": "Ingresa tu dirección de correo electrónico y te enviaremos un enlace para restablecer tu contraseña.",
+            "email": "Correo electrónico",
+            "emailPlaceholder": "Ingresa tu correo electrónico",
+            "submit": "Enviar enlace",
+            "loading": "Enviando...",
+            "backToLogin": "Volver al inicio de sesión",
+            "emailSentTitle": "Revisa tu correo electrónico",
+            "emailSentDescription": "Te hemos enviado un enlace para restablecer tu contraseña."
+        },
+        "resetPassword": {
+            "title": "Establecer nueva contraseña",
+            "subtitle": "Por favor ingresa tu nueva contraseña.",
+            "newPassword": "Nueva contraseña",
+            "newPasswordPlaceholder": "Ingresa nueva contraseña",
+            "confirmPassword": "Confirmar contraseña",
+            "confirmPasswordPlaceholder": "Vuelve a ingresar tu contraseña",
+            "passwordMismatch": "Las contraseñas no coinciden",
+            "requirements": {
+                "minLength": "Al menos 8 caracteres",
+                "hasNumber": "Contiene un número",
+                "hasSpecial": "Contiene un carácter especial (!@#$%^&*)"
+            },
+            "submit": "Cambiar contraseña",
+            "loading": "Cambiando...",
+            "successTitle": "Contraseña cambiada",
+            "successDescription": "Tu contraseña ha sido cambiada exitosamente.",
+            "goToLogin": "Ir al inicio de sesión"
         }
     }
 }

@@ -6,7 +6,8 @@
     "header": {
         "search": "Rechercher des villes...",
         "login": "Connexion",
-        "signup": "S'inscrire"
+        "signup": "S'inscrire",
+        "logout": "Déconnexion"
     },
     "hero": {
         "badge": "Guide pour nomades numériques en Corée",
@@ -63,7 +64,13 @@
     "cityCard": {
         "reviews": "avis",
         "monthly": "mois",
-        "currency": "USD"
+        "currency": "USD",
+        "budget": "Budget",
+        "environment": "Environnement",
+        "bestSeason": "Meilleure saison"
+    },
+    "cityGrid": {
+        "title": "Liste des villes"
     },
     "cityDetail": {
         "monthlyCost": "Coût mensuel",
@@ -143,6 +150,36 @@
             "or": "ou",
             "hasAccount": "Vous avez déjà un compte ?",
             "loginLink": "Se connecter"
+        },
+        "forgotPassword": {
+            "title": "Mot de passe oublié",
+            "subtitle": "Entrez votre adresse e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe.",
+            "email": "E-mail",
+            "emailPlaceholder": "Entrez votre e-mail",
+            "submit": "Envoyer le lien",
+            "loading": "Envoi en cours...",
+            "backToLogin": "Retour à la connexion",
+            "emailSentTitle": "Vérifiez votre e-mail",
+            "emailSentDescription": "Nous vous avons envoyé un lien de réinitialisation par e-mail."
+        },
+        "resetPassword": {
+            "title": "Définir un nouveau mot de passe",
+            "subtitle": "Veuillez entrer votre nouveau mot de passe.",
+            "newPassword": "Nouveau mot de passe",
+            "newPasswordPlaceholder": "Entrez le nouveau mot de passe",
+            "confirmPassword": "Confirmer le mot de passe",
+            "confirmPasswordPlaceholder": "Entrez à nouveau votre mot de passe",
+            "passwordMismatch": "Les mots de passe ne correspondent pas",
+            "requirements": {
+                "minLength": "Au moins 8 caractères",
+                "hasNumber": "Contient un chiffre",
+                "hasSpecial": "Contient un caractère spécial (!@#$%^&*)"
+            },
+            "submit": "Changer le mot de passe",
+            "loading": "Changement en cours...",
+            "successTitle": "Mot de passe changé",
+            "successDescription": "Votre mot de passe a été changé avec succès.",
+            "goToLogin": "Aller à la connexion"
         }
     }
 }
