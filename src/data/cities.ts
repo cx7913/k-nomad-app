@@ -806,6 +806,45 @@ export function getCityById(id: string, locale: Locale): City | null {
   };
 }
 
+export function getRelatedCities(cityId: string, locale: Locale, limit: number = 4): City[] {
+  const currentCity = citiesBase.find((c) => c.id === cityId);
+  if (!currentCity) return [];
+
+  const allCities = getCities(locale);
+
+  // Filter out the current city
+  const otherCities = allCities.filter((c) => c.id !== cityId);
+
+  // Score cities based on similarity
+  const scoredCities = otherCities.map((city) => {
+    let score = 0;
+
+    // Same region gets highest priority (+3 points)
+    if (city.region === currentCity.region) {
+      score += 3;
+    }
+
+    // Same budget range (+2 points)
+    if (city.budget === currentCity.budget) {
+      score += 2;
+    }
+
+    // Shared environment (+1 point per match)
+    const sharedEnv = city.environment.filter((env) =>
+      currentCity.environment.includes(env)
+    ).length;
+    score += sharedEnv;
+
+    return { city, score };
+  });
+
+  // Sort by score (descending) and return top matches
+  return scoredCities
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map((item) => item.city);
+}
+
 export const regions = [
   "all",
   "capital",

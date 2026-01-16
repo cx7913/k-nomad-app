@@ -78,7 +78,13 @@
     "region": "지역",
     "environment": "환경",
     "bestSeason": "최적 계절",
-    "backToList": "목록으로"
+    "backToList": "목록으로",
+    "rating": "평가",
+    "detailedInfo": "상세 소개",
+    "highlights": "주요 특징",
+    "relatedCities": "추천 도시",
+    "share": "공유하기",
+    "copied": "복사됨!"
   },
   "footer": {
     "about": "한국에서 디지털 노마드로 살기 좋은 도시를 찾고, 경험을 공유하는 플랫폼입니다.",
