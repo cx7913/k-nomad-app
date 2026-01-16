@@ -78,7 +78,13 @@
     "region": "Region",
     "environment": "Environment",
     "bestSeason": "Best Season",
-    "backToList": "Back to List"
+    "backToList": "Back to List",
+    "rating": "Rating",
+    "detailedInfo": "Detailed Information",
+    "highlights": "Key Features",
+    "relatedCities": "Related Cities",
+    "share": "Share",
+    "copied": "Copied!"
   },
   "footer": {
     "about": "A platform to find the best cities for digital nomads in Korea and share experiences.",

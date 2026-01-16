@@ -8,6 +8,16 @@ const intlMiddleware = createIntlMiddleware(routing);
 // 인증이 필요한 경로 패턴
 const protectedRoutes = ['/profile', '/settings'];
 
+/**
+ * Validates and sanitizes redirect path to prevent injection attacks
+ */
+function sanitizeRedirectPath(path: string): string {
+  // Only allow alphanumeric, slashes, hyphens, and underscores
+  const sanitized = path.replace(/[^a-zA-Z0-9\-_\/]/g, '');
+  // Ensure it starts with /
+  return sanitized.startsWith('/') ? sanitized : `/${sanitized}`;
+}
+
 // 로그인한 사용자가 접근하면 안 되는 경로
 const authRoutes = ['/login', '/register'];
 
@@ -39,7 +49,8 @@ export async function middleware(request: NextRequest) {
     const locale = pathname.match(/^\/(ko|en|ja|zh|fr|it|es)/)?.[1] || 'ko';
     const url = request.nextUrl.clone();
     url.pathname = `/${locale}/login`;
-    url.searchParams.set('redirect', pathname);
+    // Sanitize redirect path to prevent parameter injection
+    url.searchParams.set('redirect', sanitizeRedirectPath(pathname));
     return NextResponse.redirect(url);
   }
 
