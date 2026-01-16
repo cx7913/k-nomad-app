@@ -1,0 +1,214 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  NODE_VERSION: "20"
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+# Cancel in-progress runs for the same branch
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ============================================
+  # Preview Deployment (Pull Requests)
+  # ============================================
+  deploy-preview:
+    name: Deploy Preview
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    environment:
+      name: preview
+      url: ${{ steps.deploy.outputs.preview-url }}
+    outputs:
+      preview-url: ${{ steps.deploy.outputs.preview-url }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel@latest
+
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build Project Artifacts
+        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy to Vercel (Preview)
+        id: deploy
+        run: |
+          URL=$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }})
+          echo "preview-url=$URL" >> $GITHUB_OUTPUT
+          echo "Deployed to: $URL"
+
+      - name: Comment PR with Preview URL
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const previewUrl = '${{ steps.deploy.outputs.preview-url }}';
+            const body = `## 🚀 Preview Deployment
+
+            | Environment | URL |
+            |-------------|-----|
+            | Preview | [${previewUrl}](${previewUrl}) |
+
+            ### Deployment Info
+            - **Branch:** \`${{ github.head_ref }}\`
+            - **Commit:** \`${{ github.sha }}\`
+            - **Deployed at:** ${new Date().toISOString()}
+
+            ---
+            _Deployed with [Vercel](https://vercel.com)_`;
+
+            // Find existing comment
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+
+            const botComment = comments.find(comment =>
+              comment.user.type === 'Bot' &&
+              comment.body.includes('Preview Deployment')
+            );
+
+            if (botComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: body
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: body
+              });
+            }
+
+  # ============================================
+  # Production Deployment (Main Branch)
+  # ============================================
+  deploy-production:
+    name: Deploy Production
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    environment:
+      name: production
+      url: ${{ steps.deploy.outputs.production-url }}
+    outputs:
+      production-url: ${{ steps.deploy.outputs.production-url }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel@latest
+
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build Project Artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy to Vercel (Production)
+        id: deploy
+        run: |
+          URL=$(vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }})
+          echo "production-url=$URL" >> $GITHUB_OUTPUT
+          echo "Deployed to Production: $URL"
+
+      - name: Create GitHub Deployment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const deployment = await github.rest.repos.createDeployment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: context.sha,
+              environment: 'production',
+              auto_merge: false,
+              required_contexts: [],
+              description: 'Production deployment'
+            });
+
+            await github.rest.repos.createDeploymentStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              deployment_id: deployment.data.id,
+              state: 'success',
+              environment_url: '${{ steps.deploy.outputs.production-url }}',
+              description: 'Deployment successful'
+            });
+
+  # ============================================
+  # Post-Deployment Health Check
+  # ============================================
+  health-check:
+    name: Health Check
+    runs-on: ubuntu-latest
+    needs: [deploy-production]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - name: Wait for deployment to stabilize
+        run: sleep 30
+
+      - name: Check homepage health
+        run: |
+          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" "${{ needs.deploy-production.outputs.production-url }}")
+          if [ "$RESPONSE" != "200" ]; then
+            echo "::error::Health check failed! HTTP status: $RESPONSE"
+            exit 1
+          fi
+          echo "Health check passed! HTTP status: $RESPONSE"
+
+      - name: Check API health
+        run: |
+          # Check multiple locales
+          for locale in ko en ja; do
+            URL="${{ needs.deploy-production.outputs.production-url }}/$locale"
+            RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" "$URL")
+            echo "Checking $URL - Status: $RESPONSE"
+            if [ "$RESPONSE" != "200" ]; then
+              echo "::warning::Locale $locale returned status $RESPONSE"
+            fi
+          done
+
+  # ============================================
+  # Notify on Failure
+  # ============================================
+  notify-failure:
+    name: Notify Failure
+    runs-on: ubuntu-latest
+    needs: [deploy-production, health-check]
+    if: failure()
+    steps:
+      - name: Send failure notification
+        run: |
+          echo "::error::Deployment failed! Please check the logs."
+          # Add Slack/Discord notification here if needed
+          # curl -X POST -H 'Content-type: application/json' \
+          #   --data '{"text":"Deployment failed for ${{ github.repository }}"}' \
+          #   ${{ secrets.SLACK_WEBHOOK_URL }}
