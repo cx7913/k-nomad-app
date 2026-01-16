@@ -1,6 +1,22 @@
 import { createClient } from '@/lib/supabase/server'
 import { NextResponse } from 'next/server'
 
+/**
+ * Validates redirect URL to prevent open redirect attacks
+ * Only allows relative paths starting with /
+ */
+function isValidRedirectPath(path: string): boolean {
+  // Must start with / and not contain protocol or double slashes
+  if (!path.startsWith('/')) return false
+  if (path.startsWith('//')) return false
+  if (path.includes('://')) return false
+  // Prevent encoded attacks
+  const decoded = decodeURIComponent(path)
+  if (decoded.startsWith('//')) return false
+  if (decoded.includes('://')) return false
+  return true
+}
+
 export async function GET(
   request: Request,
   { params }: { params: Promise<{ locale: string }> }
@@ -9,7 +25,10 @@ export async function GET(
   const { searchParams, origin } = new URL(request.url)
   const code = searchParams.get('code')
   const type = searchParams.get('type')
-  const next = searchParams.get('next') ?? `/${locale}`
+  const nextParam = searchParams.get('next') ?? `/${locale}`
+
+  // Validate redirect path to prevent open redirect
+  const next = isValidRedirectPath(nextParam) ? nextParam : `/${locale}`
 
   if (code) {
     const supabase = await createClient()
